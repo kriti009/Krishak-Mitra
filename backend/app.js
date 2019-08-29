@@ -48,6 +48,13 @@ app.post("/login/farmer",(req,res)=>{
         res.status(400).json({success:false, message: "Internal errors"});
     })
 });
+app.get("/advertisement",(req,res)=>{
+    Advertisement.find({}).then((ad)=>{
+        res.status(200).json(ad);
+    }).catch(()=>{
+        res.status(400).json({success:false, message: "couldnt find any ad, Internal error"});
+    })
+});
 app.post("/advertisement",(req,res)=>{
     var new_ad = {
         category : req.body.category,
@@ -63,6 +70,19 @@ app.post("/advertisement",(req,res)=>{
     }).catch(()=>{
         res.status(400).json({success:false , message: "opsiii!! cdnt post ad, Internal error!"});
     });
+})
+app.put("/advertisement",(req,res)=>{
+    var edited_ad = {
+        status : "sold",
+    };
+    Advertisement.findByIdAndUpdate(req.body._id, edited_ad).then((ad)=>{
+        if(ad==null)
+            res.status(404).json({success: false, message: "No such Ad exists!"});
+        else
+            res.status(201).json({success: true, message: "Ad status updated"});
+    }).catch(()=>{
+        res.status(400).json({success: false, message: "Internal error, could not edit Ad"});
+    })
 })
 app.get("/complaint",(req,res)=>{
     Complaint.find({}).then((com)=>{
