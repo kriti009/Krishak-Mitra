@@ -26,6 +26,7 @@ app.post("/farmerSignup",(req,res)=>{
         phone_no : req.body.phone_no,
         password : req.body.password,
         crop_grown : req.body.crop_grown,
+        role : "farmer",
     }; 
     Farmer.create(new_farmer).then((farmer)=>{
         res.status(200).json({success: true, message: "new farmer added"});

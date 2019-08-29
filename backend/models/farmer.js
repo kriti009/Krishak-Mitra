@@ -14,7 +14,7 @@ var farmerSchema = new mongoose.Schema({
         ref: 'Advertisement'
     },
     crop_grown :[{type: String}],
-    // role : {type: String , enum: ['farmer','retailer','supplier']}
+    role : {type: String , enum: ['farmer','retailer','supplier']}
 });
 
 module.exports = mongoose.model("Farmer", farmerSchema);
