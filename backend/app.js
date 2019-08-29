@@ -9,6 +9,7 @@ var config = require('./config');
 //require models
 var Admin = require('./models/admin');
 var Complaint = require('./models/complaint');
+var Advertisement = require('./models/advertisement');
 var Farmer = require('./models/farmer');
 
 mongoose.connect("mongodb://localhost:27017/netfarm",{ useNewUrlParser: true});
@@ -47,6 +48,22 @@ app.post("/login/farmer",(req,res)=>{
         res.status(400).json({success:false, message: "Internal errors"});
     })
 });
+app.post("/advertisement",(req,res)=>{
+    var new_ad = {
+        category : req.body.category,
+        item_name : req.body.item_name,
+        quantity : req.body.quantity|| 0,
+        cost : req.body.cost || 0,
+        posterType : req.body.posterType,
+        poster : req.body.poster,
+        status: "not-sold",
+    };
+    Advertisement.create(new_ad).then((ad)=>{
+        res.status(200).json({success: true, message: "ad posted"});
+    }).catch(()=>{
+        res.status(400).json({success:false , message: "opsiii!! cdnt post ad, Internal error!"});
+    });
+})
 app.get("/complaint",(req,res)=>{
     Complaint.find({}).then((com)=>{
         res.status(200).json(com);
