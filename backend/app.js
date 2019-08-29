@@ -59,11 +59,20 @@ app.post("/complaint",(req, res)=>{
         context : req.body.context,
         category: req.body.category,
         complainant : req.body.complainant_id,
+        complainer : req.body.complainer,
         respondent : req.body.respondent_id,
+        responder : req.body.responder,
         status: "In-Queue",
     };
     Complaint.create(new_complaint).then((com)=>{
-        res.status(201).json({success: true, message : "Complaint posted"});
+        if(new_complaint.complainer=='Farmer'){
+            Farmer.findById(new_complaint.complainant).then((farmer)=>{
+                farmer.complaint.push(com._id);
+                farmer.save(()=>{
+                    res.status(201).json({success: true, message : "Complaint posted"});
+                })
+            }).catch();
+        }
     }).catch(()=>{
         res.status(400).json({success: false, message: "Internal error, could not post complaint"});
     })

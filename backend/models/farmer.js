@@ -5,14 +5,14 @@ var farmerSchema = new mongoose.Schema({
     phone_no : {type: String},
     password :{type: String},
     jwtToken: [{type:String}],
-    complaint : {
+    complaint : [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Complaint'
-    },
-    ad: {
+    }],
+    ad: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Advertisement'
-    },
+    }],
     crop_grown :[{type: String}],
     role : {type: String , enum: ['farmer','retailer','supplier']}
 });
