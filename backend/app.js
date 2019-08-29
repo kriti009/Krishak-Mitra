@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 // app.use(express.static(__dirname + "/public"));
 
-app.post("/farmerSignup",(req,res)=>{
+app.post("/signup/farmer",(req,res)=>{
     var new_farmer = {
         name : req.body.name,
         phone_no : req.body.phone_no,
@@ -34,7 +34,7 @@ app.post("/farmerSignup",(req,res)=>{
         res.status(400).json({success: false, message:"Cannot create new ID"});
     })
 });
-app.post("/farmerLogin",(req,res)=>{
+app.post("/login/farmer",(req,res)=>{
     var phone_no = req.body.phone_no;
     var password = req.body.password;
     Farmer.findOne({'phone_no': phone_no}).then((user)=>{
@@ -42,25 +42,23 @@ app.post("/farmerLogin",(req,res)=>{
             res.status(404).json({success: false, message: "no such farmer exixsts"});
         if(password != user.password)
             res.status(400).json({success: false, message: "Credenials doesnt match"});
-        res.status(200).json({success:true, message: "Welcome back"+user.name});
+        res.status(200).json({success:true, message: "Welcome back "+user.name});
+    }).catch(()=>{
+        res.status(400).json({success:false, message: "Internal errors"});
     })
 });
-app.get("/complaint",()=>{
+app.get("/complaint",(req,res)=>{
     Complaint.find({}).then((com)=>{
-        if(com==null){
-            res.status(404).json({success: false, message: "No Complaints found"});
-        }else{
-            res.status(200).json(com);
-        }
+        res.status(200).json(com);
     })
 });
 app.post("/complaint",(req, res)=>{
     var new_complaint = {
-        context : req.body.context,
+        context : req.body.context ,
         category: req.body.category,
-        complainant : req.body.complainant_id,
+        complainant : req.body.complainant,
         complainer : req.body.complainer,
-        respondent : req.body.respondent_id,
+        respondent : req.body.respondent,
         responder : req.body.responder,
         status: "In-Queue",
     };
@@ -81,13 +79,13 @@ app.put("/complaint",(req,res)=>{
     var edited_complaint = {
         status : req.body.status,
     };
-    Complaint.findOne(req.body._id).then((com)=>{
+    Complaint.findByIdAndUpdate(req.body._id, edited_complaint).then((com)=>{
         if(com==null)
             res.status(404).json({success: false, message: "No such complaint exists!"});
         else
             res.status(201).json({success: true, message: "compalint status updated"});
     }).catch(()=>{
-        res.status(400).json({success: false, message: "Internal error, could not post complaint"});
+        res.status(400).json({success: false, message: "Internal error, could not edit complaint"});
     })
 })
 

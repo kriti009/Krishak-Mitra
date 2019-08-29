@@ -6,10 +6,12 @@ var complaintSchema = new mongoose.Schema({
     context : {type: String},
     complainant : {
         type: Schema.Types.ObjectId,
+        required: true,
         refPath: 'complainer'
     },
-    Respondent : {
+    respondent : {
         type: Schema.Types.ObjectId,
+        required: true,
         refPath: 'responder'
     },
     complainer : {
