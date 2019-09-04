@@ -3,7 +3,7 @@ import { Col, FormCheckbox } from "shards-react";
 
 const ToggleButtons = () => (
   <Col sm="12" md="4" className="mb-3">
-    <strong className="text-muted d-block mb-2">Toggle Switches</strong>
+    {/* <strong className="text-muted d-block mb-2">Toggle Switches</strong>
     <fieldset>
       <FormCheckbox toggle small>
         Default
@@ -17,7 +17,7 @@ const ToggleButtons = () => (
       <FormCheckbox toggle small defaultChecked disabled>
         Disabled Checked
       </FormCheckbox>
-    </fieldset>
+    </fieldset> */}
   </Col>
 );
 

@@ -9,7 +9,7 @@ import {
 
 const SeamlessInputGroups = () => (
   <div>
-    <InputGroup seamless className="mb-3">
+    {/* <InputGroup seamless className="mb-3">
       <InputGroupAddon type="prepend">
         <InputGroupText>
           <i className="material-icons">person</i>
@@ -36,7 +36,7 @@ const SeamlessInputGroups = () => (
       <InputGroupAddon type="append">
         <Button theme="white">Button</Button>
       </InputGroupAddon>
-    </InputGroup>
+    </InputGroup> */}
   </div>
 );
 

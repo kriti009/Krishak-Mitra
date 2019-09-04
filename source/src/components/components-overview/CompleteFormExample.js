@@ -20,36 +20,36 @@ const CompleteFormExample = () => (
           <Form>
             <Row form>
               <Col md="6" className="form-group">
-                <label htmlFor="feEmailAddress">Email</label>
+                <label htmlFor="feEmailAddress">Username</label>
                 <FormInput
                   id="feEmailAddress"
                   type="email"
-                  placeholder="Email"
+                  placeholder="Username"
                 />
               </Col>
               <Col md="6">
-                <label htmlFor="fePassword">Password</label>
+                <label htmlFor="fePassword">Farmer or Supplier</label>
                 <FormInput
                   id="fePassword"
                   type="password"
-                  placeholder="Password"
+                  placeholder="who are you?"
                 />
               </Col>
             </Row>
 
             <FormGroup>
-              <label htmlFor="feInputAddress">Address</label>
-              <FormInput id="feInputAddress" placeholder="1234 Main St" />
+              <label htmlFor="feInputAddress">Issue</label>
+              <FormInput id="feInputAddress" placeholder="How can we help you?" />
             </FormGroup>
 
             <FormGroup>
-              <label htmlFor="feInputAddress2">Address 2</label>
+              <label htmlFor="feInputAddress2">Phone Number</label>
               <FormInput
                 id="feInputAddress2"
-                placeholder="Apartment, Studio or Floor"
+                placeholder=""
               />
             </FormGroup>
-
+{/* 
             <Row form>
               <Col md="6" className="form-group">
                 <label htmlFor="feInputCity">City</label>
@@ -68,12 +68,12 @@ const CompleteFormExample = () => (
               </Col>
               <Col md="12" className="form-group">
                 <FormCheckbox>
-                  {/* eslint-disable-next-line */}I agree with your{" "}
+                  {}I agree with your{" "}
                   <a href="#">Privacy Policy</a>.
                 </FormCheckbox>
               </Col>
-            </Row>
-            <Button type="submit">Create New Account</Button>
+            </Row> */}
+            <Button type="submit">Send</Button>
           </Form>
         </Col>
       </Row>

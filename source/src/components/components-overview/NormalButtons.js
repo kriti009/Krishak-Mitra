@@ -3,7 +3,7 @@ import { Row, Col, Button } from "shards-react";
 
 const NormalButtons = () => (
   <Row>
-    <Col>
+    {/* <Col>
       <Button theme="primary" className="mb-2 mr-1">
         Primary
       </Button>
@@ -28,7 +28,7 @@ const NormalButtons = () => (
       <Button theme="light" className="mb-2 mr-1">
         Light
       </Button>
-    </Col>
+    </Col> */}
   </Row>
 );
 

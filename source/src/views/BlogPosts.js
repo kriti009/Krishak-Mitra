@@ -22,7 +22,7 @@ class BlogPosts extends React.Component {
       // First list of posts.
       PostsListOne: [
         {
-          backgroundImage: require("../images/content-management/1.jpeg"),
+          backgroundImage: require("../images/content-management/coffee.jpg"),
           category: "Farmer",
           categoryTheme: "dark",
           author: "Anna Kunis",
@@ -33,7 +33,7 @@ class BlogPosts extends React.Component {
           date: "Phone Number"
         },
         {
-          backgroundImage: require("../images/content-management/2.jpeg"),
+          backgroundImage: require("../images/content-management/wheat.jpg"),
           category: "Supplier",
           categoryTheme: "info",
           author: "James Jamerson",
@@ -44,7 +44,7 @@ class BlogPosts extends React.Component {
           date: "Phone Number"
         },
         {
-          backgroundImage: require("../images/content-management/3.jpeg"),
+          backgroundImage: require("../images/content-management/rice.jpg"),
           category: "Farmer",
           categoryTheme: "dark",
           author: "Jimmy Jackson",
@@ -54,6 +54,18 @@ class BlogPosts extends React.Component {
             "Rice type, Quantity , About the crop.",
           date: "Phone Number"
         },
+        {
+          backgroundImage: require("../images/content-management/rice.jpg"),
+          category: "Farmer",
+          categoryTheme: "dark",
+          author: "Jimmy Jackson",
+          authorAvatar: require("../images/avatars/2.jpg"),
+          title: "Rice",
+          body:
+            "Rice type, Quantity , About the crop.",
+          date: "Phone Number"
+        },
+       
         {
           backgroundImage: require("../images/content-management/3.jpeg"),
           category: "Farmer",
@@ -66,40 +78,40 @@ class BlogPosts extends React.Component {
           date: "Phone Number"
         },
         {
-          backgroundImage: require("../images/content-management/3.jpeg"),
+          backgroundImage: require("../images/content-management/coffee.jpg"),
           category: "Farmer",
           categoryTheme: "dark",
-          author: "Jimmy Jackson",
-          authorAvatar: require("../images/avatars/2.jpg"),
-          title: "Rice",
+          author: "Anna Kunis",
+          authorAvatar: require("../images/avatars/1.jpg"),
+          title: "Coffee Beans",
           body:
-            "Rice type, Quantity , About the crop.",
+            "Robusta coffe beans , Quantity , About the crop.",
           date: "Phone Number"
         },
         {
-          backgroundImage: require("../images/content-management/3.jpeg"),
-          category: "Farmer",
-          categoryTheme: "dark",
-          author: "Jimmy Jackson",
-          authorAvatar: require("../images/avatars/2.jpg"),
-          title: "Rice",
+          backgroundImage: require("../images/content-management/sugarcane.jpg"),
+          category: "Supplier",
+          categoryTheme: "info",
+          author: "John James",
+          authorAvatar: require("../images/avatars/3.jpg"),
+          title: "Sugarcane",
           body:
-            "Rice type, Quantity , About the crop.",
+            "Sugarcane type, Quantity , About the crop.",
           date: "Phone Number"
         },
         {
-          backgroundImage: require("../images/content-management/3.jpeg"),
+          backgroundImage: require("../images/content-management/coffee.jpg"),
           category: "Farmer",
           categoryTheme: "dark",
-          author: "Jimmy Jackson",
-          authorAvatar: require("../images/avatars/2.jpg"),
-          title: "Rice",
+          author: "Anna Kunis",
+          authorAvatar: require("../images/avatars/1.jpg"),
+          title: "Coffee Beans",
           body:
-            "Rice type, Quantity , About the crop.",
+            "Robusta coffe beans , Quantity , About the crop.",
           date: "Phone Number"
         },
         {
-          backgroundImage: require("../images/content-management/4.jpeg"),
+          backgroundImage: require("../images/content-management/sugarcane.jpg"),
           category: "Supplier",
           categoryTheme: "info",
           author: "John James",
@@ -230,10 +242,50 @@ class BlogPosts extends React.Component {
       <Container fluid className="main-content-container px-4">
         {/* Page Header */}
         <Row noGutters className="page-header py-4">
-          <PageTitle sm="4" title="Blog Posts" subtitle="Components" className="text-sm-left" />
+          <PageTitle sm="4" title="View Advertisments" subtitle="" className="text-sm-left" />
         </Row>
 
         {/* First Row of Posts */}
+        <Row>
+          {PostsListOne.map((post, idx) => (
+            <Col lg="3" md="6" sm="12" className="mb-4" key={idx}>
+              <Card small className="card-post card-post--1">
+                <div
+                  className="card-post__image"
+                  style={{ backgroundImage: `url(${post.backgroundImage})` }}
+                >
+                  <Badge
+                    pill
+                    className={`card-post__category bg-${post.categoryTheme}`}
+                  >
+                    {post.category}
+                  </Badge>
+                  <div className="card-post__author d-flex">
+                    <a
+                      href="#"
+                      className="card-post__author-avatar card-post__author-avatar--small"
+                      style={{ backgroundImage: `url('${post.authorAvatar}')` }}
+                    >
+                      Written by {post.author}
+                    </a>
+                  </div>
+                </div>
+                <CardBody>
+                  <h5 className="card-title">
+                    <a href="#" className="text-fiord-blue">
+                      {post.title}
+                    </a>
+                  </h5>
+                  <p className="card-text d-inline-block mb-3">{post.body}</p>
+                  <span className="text-muted">{post.date}</span>
+                </CardBody>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+        <Row noGutters className="page-header py-4">
+          <PageTitle sm="4" title="My Advertisments" subtitle="" className="text-sm-left" />
+        </Row>
         <Row>
           {PostsListOne.map((post, idx) => (
             <Col lg="3" md="6" sm="12" className="mb-4" key={idx}>

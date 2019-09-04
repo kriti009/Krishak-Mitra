@@ -1,7 +1,7 @@
 /* eslint jsx-a11y/anchor-is-valid: 0 */
 
 import React from "react";
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 import {
   Card,
   CardHeader,
@@ -11,13 +11,13 @@ import {
   Button
 } from "shards-react";
 
-const SidebarActions = ({ title }) => (
+const SidebarActions = () => (
   <Card small className="mb-3">
-    <CardHeader className="border-bottom">
+    {/* <CardHeader className="border-bottom">
       <h6 className="m-0">{title}</h6>
-    </CardHeader>
+    </CardHeader> */}
 
-    <CardBody className="p-0">
+    {/* <CardBody className="p-0">
       <ListGroup flush>
         <ListGroupItem className="p-3">
           <span className="d-flex mb-2">
@@ -57,19 +57,19 @@ const SidebarActions = ({ title }) => (
           </Button>
         </ListGroupItem>
       </ListGroup>
-    </CardBody>
+    </CardBody> */}
   </Card>
 );
 
-SidebarActions.propTypes = {
-  /**
-   * The component's title.
-   */
-  title: PropTypes.string
-};
+// SidebarActions.propTypes = {
+//   /**
+//    * The component's title.
+//    */
+//   title: PropTypes.string
+// };
 
-SidebarActions.defaultProps = {
-  title: "Actions"
-};
+// SidebarActions.defaultProps = {
+//   title: "Actions"
+// };
 
 export default SidebarActions;

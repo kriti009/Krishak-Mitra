@@ -3,7 +3,7 @@ import { ListGroupItem, Slider } from "shards-react";
 
 const Sliders = () => (
   <ListGroupItem className="px-3">
-    <div className="mb-2 pb-1">
+    {/* <div className="mb-2 pb-1">
       <strong className="text-muted d-block">Custom Sliders</strong>
       <Slider
         theme="success"
@@ -31,7 +31,7 @@ const Sliders = () => (
         }}
         range={{ min: 0, max: 100 }}
       />
-    </div>
+    </div> */}
   </ListGroupItem>
 );
 

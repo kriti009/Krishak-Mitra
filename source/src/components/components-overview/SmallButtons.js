@@ -2,7 +2,7 @@ import React from "react";
 import { Row, Col, Button } from "shards-react";
 
 const SmallButtons = () => (
-  <Row className="mb-3 mt-2">
+   <Row className="mb-3 mt-2">
     <Col>
       <Button size="sm" theme="primary" className="mb-2 mr-1">
         Primary
@@ -28,8 +28,9 @@ const SmallButtons = () => (
       <Button size="sm" theme="white" className="mb-2 mr-1">
         White
       </Button>
-    </Col>
-  </Row>
+    </Col> 
+  </Row> 
+  
 );
 
 export default SmallButtons;

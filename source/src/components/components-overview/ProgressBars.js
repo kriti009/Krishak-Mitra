@@ -3,7 +3,7 @@ import { ListGroupItem, Progress } from "shards-react";
 
 const ProgressBars = () => (
   <ListGroupItem className="px-3">
-    <div className="mb-2">
+    {/* <div className="mb-2">
       <strong className="text-muted d-block mb-3">Progress Bars</strong>
       <Progress style={{ height: "5px" }} value={50} className="mb-3" />
       <Progress
@@ -24,7 +24,7 @@ const ProgressBars = () => (
         className="mb-3"
         value={80}
       />
-    </div>
+    </div> */}
   </ListGroupItem>
 );
 

@@ -3,7 +3,7 @@ import { Col, FormRadio } from "shards-react";
 
 const RadioButtons = () => (
   <Col sm="12" md="4" className="mb-3">
-    <strong className="text-muted d-block mb-2">Radio Buttons</strong>
+    {/* <strong className="text-muted d-block mb-2">Radio Buttons</strong>
     <fieldset>
       <FormRadio>Default</FormRadio>
       <FormRadio defaultChecked>Checked</FormRadio>
@@ -11,7 +11,7 @@ const RadioButtons = () => (
       <FormRadio disabled defaultChecked>
         Disabled Checked
       </FormRadio>
-    </fieldset>
+    </fieldset> */}
   </Col>
 );
 

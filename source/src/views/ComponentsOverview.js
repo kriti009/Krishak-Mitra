@@ -34,17 +34,17 @@ import CustomSelect from "../components/components-overview/CustomSelect";
 
 const ComponentsOverview = () => (
   <div>
-    <Container fluid className="px-0">
+    {/* <Container fluid className="px-0">
       <Alert className="mb-0">
         <i className="fa fa-info mx-2"></i> How you doin'? I'm just a friendly, good-looking notification message and I come in all the colors you can see below. Pretty cool, huh?
       </Alert>
-    </Container>
+    </Container> */}
     <Container fluid className="main-content-container px-4">
       <Row noGutters className="page-header py-4">
         <PageTitle
           sm="4"
-          title="Forms & Components"
-          subtitle="Overview"
+          title="Complains"
+          subtitle=""
           className="text-sm-left"
         />
       </Row>
@@ -53,9 +53,9 @@ const ComponentsOverview = () => (
 
       <Row>
         <Col lg="8" className="mb-4">
-          <Card small className="mb-4">
+          {/* <Card small className="mb-4">
             <CardHeader className="border-bottom">
-              <h6 className="m-0">Form Inputs</h6>
+              <h6 className="m-0">Form </h6>
             </CardHeader>
 
             <ListGroup flush>
@@ -80,20 +80,20 @@ const ComponentsOverview = () => (
               </ListGroupItem>
 
               <ListGroupItem className="p-3">
-                {/* Normal Buttons */}
+                
                 <strong className="text-muted d-block my-2">
                   Normal Buttons
                 </strong>
                 <NormalButtons />
 
-                {/* Normal Outline Buttons */}
+                
                 <strong className="text-muted d-block my-2">
                   Normal Outline Buttons
                 </strong>
                 <NormalOutlineButtons />
               </ListGroupItem>
 
-              {/* Forms & Form Validation */}
+              
               <ListGroupItem className="p-3">
                 <Row>
                   <Forms />
@@ -101,9 +101,9 @@ const ComponentsOverview = () => (
                 </Row>
               </ListGroupItem>
             </ListGroup>
-          </Card>
+          </Card> */}
 
-          {/* Complete Form Example */}
+          
           <Card small>
             <CardHeader className="border-bottom">
               <h6 className="m-0">Form Example</h6>
@@ -112,8 +112,8 @@ const ComponentsOverview = () => (
           </Card>
         </Col>
 
-        <Col lg="4" className="mb-4">
-          {/* Sliders & Progress Bars */}
+        {/* <Col lg="4" className="mb-4">
+          
           <Card small className="mb-4">
             <CardHeader className="border-bottom">
               <h6 className="m-0">Sliders & Progress Bars</h6>
@@ -122,10 +122,10 @@ const ComponentsOverview = () => (
               <ProgressBars />
               <Sliders />
             </ListGroup>
-          </Card>
+          </Card> */}
 
           {/* Groups */}
-          <Card small className="mb-4">
+          {/* <Card small className="mb-4">
             <CardHeader className="border-bottom">
               <h6 className="m-0">Groups</h6>
             </CardHeader>
@@ -150,10 +150,10 @@ const ComponentsOverview = () => (
                 </Form>
               </ListGroupItem>
             </ListGroup>
-          </Card>
+          </Card> */}
 
-          <Card small>
-            {/* Files & Dropdowns */}
+           {/* <Card small>
+            
             <CardHeader className="border-bottom">
               <h6 className="m-0">Files & Dropdowns</h6>
             </CardHeader>
@@ -166,7 +166,7 @@ const ComponentsOverview = () => (
                 <CustomFileUpload />
 
                 <strong className="text-muted d-block mb-2">
-                  Dropdown Input Groups
+                  Dropdown Input 
                 </strong>
                 <DropdownInputGroups />
 
@@ -176,8 +176,10 @@ const ComponentsOverview = () => (
                 <CustomSelect />
               </ListGroupItem>
             </ListGroup>
-          </Card>
-        </Col>
+          </Card> 
+         
+        
+           </Col>*/}
       </Row>
     </Container>
   </div>

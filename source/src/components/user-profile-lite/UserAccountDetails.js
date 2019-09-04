@@ -50,12 +50,12 @@ const UserAccountDetails = ({ title }) => (
               <Row form>
                 {/* Email */}
                 <Col md="6" className="form-group">
-                  <label htmlFor="feEmail">Email</label>
+                  <label htmlFor="feEmail">Username</label>
                   <FormInput
                     type="email"
                     id="feEmail"
-                    placeholder="Email Address"
-                    value="sierra@example.com"
+                    placeholder="Username"
+                    value=""
                     onChange={() => {}}
                     autoComplete="email"
                   />
@@ -67,7 +67,7 @@ const UserAccountDetails = ({ title }) => (
                     type="password"
                     id="fePassword"
                     placeholder="Password"
-                    value="EX@MPL#P@$$w0RD"
+                    value=""
                     onChange={() => {}}
                     autoComplete="current-password"
                   />
@@ -78,7 +78,7 @@ const UserAccountDetails = ({ title }) => (
                 <FormInput
                   id="feAddress"
                   placeholder="Address"
-                  value="1234 Main St."
+                  value=""
                   onChange={() => {}}
                 />
               </FormGroup>

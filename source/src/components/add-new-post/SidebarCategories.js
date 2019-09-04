@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+//import PropTypes from "prop-types";
 import {
   Card,
   CardHeader,
@@ -15,7 +15,7 @@ import {
 
 const SidebarCategories = ({ title }) => (
   <Card small className="mb-3">
-    <CardHeader className="border-bottom">
+    {/* <CardHeader className="border-bottom">
       <h6 className="m-0">{title}</h6>
     </CardHeader>
     <CardBody className="p-0">
@@ -49,19 +49,19 @@ const SidebarCategories = ({ title }) => (
           </InputGroup>
         </ListGroupItem>
       </ListGroup>
-    </CardBody>
+    </CardBody> */}
   </Card>
 );
 
-SidebarCategories.propTypes = {
-  /**
-   * The component's title.
-   */
-  title: PropTypes.string
-};
+// SidebarCategories.propTypes = {
+//   /**
+//    * The component's title.
+//    */
+//   title: PropTypes.string
+// };
 
-SidebarCategories.defaultProps = {
-  title: "Categories"
-};
+// SidebarCategories.defaultProps = {
+//   title: "Categories"
+// };
 
 export default SidebarCategories;
