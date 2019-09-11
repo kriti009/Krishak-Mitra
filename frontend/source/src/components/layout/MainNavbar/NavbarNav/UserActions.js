@@ -15,7 +15,8 @@ export default class UserActions extends React.Component {
     super(props);
 
     this.state = {
-      visible: false
+      visible: false,
+      username : "Kriti Dewan",
     };
 
     this.toggleUserActions = this.toggleUserActions.bind(this);
@@ -26,7 +27,10 @@ export default class UserActions extends React.Component {
       visible: !this.state.visible
     });
   }
-
+  componentDidMount= ()=>{
+    var name = localStorage.getItem("name");
+    this.setState({username : name});
+  }
   render() {
     return (
       <NavItem tag={Dropdown} caret toggle={this.toggleUserActions}>
@@ -36,7 +40,7 @@ export default class UserActions extends React.Component {
             src={require("./../../../../images/avatars/0.jpg")}
             alt="User Avatar"
           />{" "}
-          <span className="d-none d-md-inline-block">Sierra Brooks</span>
+          <span className="d-none d-md-inline-block">{this.state.username}</span>
         </DropdownToggle>
         <Collapse tag={DropdownMenu} right small open={this.state.visible}>
           <DropdownItem tag={Link} to="user-profile">
