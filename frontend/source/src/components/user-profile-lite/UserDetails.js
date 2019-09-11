@@ -61,15 +61,15 @@ UserDetails.propTypes = {
 
 UserDetails.defaultProps = {
   userDetails: {
-    name: "Sierra Brooks",
+    name: "गंगा देवी ",
     avatar: require("./../../images/avatars/0.jpg"),
-    jobTitle: "Farmer",
+    jobTitle: "किसान",
     //performanceReportTitle: "Workload",
     //performanceReportValue: 74,
-    metaTitle: "Description",
+    metaTitle: "विवरण ",
     metaValue:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio eaque, quidem, commodi soluta qui quae minima obcaecati quod dolorum sint alias, possimus illum assumenda eligendi cumque?"
-  }
+      "गेहूँ, चावल"
+    }
 };
 
 export default UserDetails;

@@ -20,30 +20,30 @@ const CompleteFormExample = () => (
           <Form>
             <Row form>
               <Col md="6" className="form-group">
-                <label htmlFor="feEmailAddress">Username</label>
+                <label htmlFor="feEmailAddress">यूजरनाम</label>
                 <FormInput
                   id="feEmailAddress"
                   type="email"
-                  placeholder="Username"
+                  placeholder="ganga"
                 />
               </Col>
               <Col md="6">
-                <label htmlFor="fePassword">Farmer or Supplier</label>
+                <label htmlFor="fePassword">किसान/आपूर्तिकर्ता?</label>
                 <FormInput
                   id="fePassword"
                   type="password"
-                  placeholder="who are you?"
+                  placeholder="आप क्या हैं? किसान/आपूर्तिकर्ता ?"
                 />
               </Col>
             </Row>
 
             <FormGroup>
-              <label htmlFor="feInputAddress">Issue</label>
-              <FormInput id="feInputAddress" placeholder="How can we help you?" />
+              <label htmlFor="feInputAddress">समस्या का विवरण </label>
+              <FormInput id="feInputAddress" placeholder="हम आपकी कैसे सहायता कर सकते हैं " />
             </FormGroup>
 
             <FormGroup>
-              <label htmlFor="feInputAddress2">Phone Number</label>
+              <label htmlFor="feInputAddress2">फ़ोन नंबर</label>
               <FormInput
                 id="feInputAddress2"
                 placeholder=""
@@ -73,7 +73,7 @@ const CompleteFormExample = () => (
                 </FormCheckbox>
               </Col>
             </Row> */}
-            <Button type="submit">Send</Button>
+            <Button type="submit">शिकायत दर्ज करें</Button>
           </Form>
         </Col>
       </Row>

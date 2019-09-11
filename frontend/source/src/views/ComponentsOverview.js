@@ -43,7 +43,7 @@ const ComponentsOverview = () => (
       <Row noGutters className="page-header py-4">
         <PageTitle
           sm="4"
-          title="Complains"
+          title="शिकायत दर्ज करें "
           subtitle=""
           className="text-sm-left"
         />
@@ -105,9 +105,7 @@ const ComponentsOverview = () => (
 
           
           <Card small>
-            <CardHeader className="border-bottom">
-              <h6 className="m-0">Form Example</h6>
-            </CardHeader>
+            
             <CompleteFormExample />
           </Card>
         </Col>

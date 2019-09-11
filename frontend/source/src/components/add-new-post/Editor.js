@@ -22,22 +22,22 @@ const Editor = () => (
       <Form className="quick-post-form">
         {/* Title */}
         <FormGroup>
-          <FormInput placeholder="Crop Name" />
+          <FormInput placeholder="फसल का नाम " />
         </FormGroup>
 
         {/* Body */}
         <FormGroup>
-          <FormTextarea placeholder="Description" />
+          <FormTextarea placeholder="विवरण " />
         </FormGroup>
         <div className="custom-file mb-3">
      <input type="file" className="custom-file-input" id="customFile2" />
     <label className="custom-file-label" htmlFor="customFile2">
-      Choose Image
+      तस्वीर डालें 
     </label> 
   </div>        {/* Create Draft */}
         <FormGroup className="mb-0">
           <Button theme="accent" type="submit">
-            Post
+            पोस्ट करें 
           </Button>
         </FormGroup>
       </Form>

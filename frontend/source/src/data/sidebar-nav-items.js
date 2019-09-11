@@ -7,17 +7,17 @@ export default function() {
     //   htmlAfter: ""
     // },
     {
-      title: "View Advertisments",
+      title: "विज्ञापन देखें",
       htmlBefore: '<i class="material-icons">vertical_split</i>',
       to: "/blog-posts",
     },
     {
-      title: "Add New Advertisments",
+      title: "नया विज्ञापन दें",
       htmlBefore: '<i class="material-icons">note_add</i>',
       to: "/add-new-post",
     },
     {
-      title: "Complains",
+      title: "शिकायत दर्ज करें",
       htmlBefore: '<i class="material-icons">view_module</i>',
       to: "/components-overview",
     },
@@ -27,14 +27,10 @@ export default function() {
     //   to: "/tables",
     // },
      {
-      title: "User Profile",
+      title: "आपकी प्रोफाइल",
       htmlBefore: '<i class="material-icons">person</i>',
       to: "/user-profile-lite",
     },
-    {
-      title: "Errors",
-      htmlBefore: '<i class="material-icons">error</i>',
-      to: "/errors",
-    }
+    
   ];
 }

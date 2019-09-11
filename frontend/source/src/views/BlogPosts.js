@@ -23,104 +23,73 @@ class BlogPosts extends React.Component {
       PostsListOne: [
         {
           backgroundImage: require("../images/content-management/coffee.jpg"),
-          category: "Farmer",
+          category: "किसान",
           categoryTheme: "dark",
           author: "Anna Kunis",
           authorAvatar: require("../images/avatars/1.jpg"),
-          title: "Coffee Beans",
+          title: "कॉफ़ी के बीज",
           body:
-            "Robusta coffe beans , Quantity , About the crop.",
-          date: "Phone Number"
+            "रोबस्टा कॉफ़ी बीन्स , 25 किलो , फसल के बारे में",
+          date: "फ़ोन नंबर"
         },
         {
           backgroundImage: require("../images/content-management/wheat.jpg"),
-          category: "Supplier",
+          category: "आपूर्तिकर्ता",
           categoryTheme: "info",
           author: "James Jamerson",
           authorAvatar: require("../images/avatars/2.jpg"),
-          title: "Wheat",
+          title: "गेहूँ",
           body:
-            "Wheat Type , Quantity , About the crop. ",
-          date: "Phone Number"
+            "शरबती  गेहूँ ,100 किलो, फसल के बारे में ",
+          date: "फ़ोन नंबर"
         },
         {
           backgroundImage: require("../images/content-management/rice.jpg"),
-          category: "Farmer",
+          category: "किसान",
           categoryTheme: "dark",
           author: "Jimmy Jackson",
           authorAvatar: require("../images/avatars/2.jpg"),
-          title: "Rice",
+          title: "चावल",
           body:
-            "Rice type, Quantity , About the crop.",
-          date: "Phone Number"
+            "बासमती ,100 किलो, फसल के बारे में ",
+          date: "फ़ोन नंबर"
         },
+        
+       {
+          backgroundImage: require("../images/content-management/wheat.jpg"),
+          category: "आपूर्तिकर्ता",
+          categoryTheme: "info",
+          author: "James Jamerson",
+          authorAvatar: require("../images/avatars/2.jpg"),
+          title: "गेहूँ",
+          body:
+            "शरबती  गेहूँ ,100 किलो, फसल के बारे में ",
+          date: "फ़ोन नंबर"
+        },
+       {
+          backgroundImage: require("../images/content-management/coffee.jpg"),
+          category: "किसान",
+          categoryTheme: "dark",
+          author: "Anna Kunis",
+          authorAvatar: require("../images/avatars/1.jpg"),
+          title: "कॉफ़ी के बीज",
+          body:
+            "रोबस्टा कॉफ़ी बीन्स , 25 किलो , फसल के बारे में",
+          date: "फ़ोन नंबर"
+        },
+        
         {
           backgroundImage: require("../images/content-management/rice.jpg"),
-          category: "Farmer",
+          category: "किसान",
           categoryTheme: "dark",
           author: "Jimmy Jackson",
           authorAvatar: require("../images/avatars/2.jpg"),
-          title: "Rice",
+          title: "चावल",
           body:
-            "Rice type, Quantity , About the crop.",
-          date: "Phone Number"
+            "बासमती ,100 किलो, फसल के बारे में ",
+          date: "फ़ोन नंबर"
         },
-       
-        {
-          backgroundImage: require("../images/content-management/3.jpeg"),
-          category: "Farmer",
-          categoryTheme: "dark",
-          author: "Jimmy Jackson",
-          authorAvatar: require("../images/avatars/2.jpg"),
-          title: "Rice",
-          body:
-            "Rice type, Quantity , About the crop.",
-          date: "Phone Number"
-        },
-        {
-          backgroundImage: require("../images/content-management/coffee.jpg"),
-          category: "Farmer",
-          categoryTheme: "dark",
-          author: "Anna Kunis",
-          authorAvatar: require("../images/avatars/1.jpg"),
-          title: "Coffee Beans",
-          body:
-            "Robusta coffe beans , Quantity , About the crop.",
-          date: "Phone Number"
-        },
-        {
-          backgroundImage: require("../images/content-management/sugarcane.jpg"),
-          category: "Supplier",
-          categoryTheme: "info",
-          author: "John James",
-          authorAvatar: require("../images/avatars/3.jpg"),
-          title: "Sugarcane",
-          body:
-            "Sugarcane type, Quantity , About the crop.",
-          date: "Phone Number"
-        },
-        {
-          backgroundImage: require("../images/content-management/coffee.jpg"),
-          category: "Farmer",
-          categoryTheme: "dark",
-          author: "Anna Kunis",
-          authorAvatar: require("../images/avatars/1.jpg"),
-          title: "Coffee Beans",
-          body:
-            "Robusta coffe beans , Quantity , About the crop.",
-          date: "Phone Number"
-        },
-        {
-          backgroundImage: require("../images/content-management/sugarcane.jpg"),
-          category: "Supplier",
-          categoryTheme: "info",
-          author: "John James",
-          authorAvatar: require("../images/avatars/3.jpg"),
-          title: "Sugarcane",
-          body:
-            "Sugarcane type, Quantity , About the crop.",
-          date: "Phone Number"
-        }
+        
       ],
 
       // Second list of posts.
@@ -242,7 +211,7 @@ class BlogPosts extends React.Component {
       <Container fluid className="main-content-container px-4">
         {/* Page Header */}
         <Row noGutters className="page-header py-4">
-          <PageTitle sm="4" title="View Advertisments" subtitle="" className="text-sm-left" />
+          <PageTitle sm="4" title="विज्ञापन देखें " subtitle="" className="text-sm-left" />
         </Row>
 
         {/* First Row of Posts */}
@@ -284,7 +253,7 @@ class BlogPosts extends React.Component {
           ))}
         </Row>
         <Row noGutters className="page-header py-4">
-          <PageTitle sm="4" title="My Advertisments" subtitle="" className="text-sm-left" />
+          <PageTitle sm="4" title="अपने विज्ञापन देखें " subtitle="" className="text-sm-left" />
         </Row>
         <Row>
           {PostsListOne.map((post, idx) => (
