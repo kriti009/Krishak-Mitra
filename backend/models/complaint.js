@@ -24,7 +24,8 @@ var complaintSchema = new mongoose.Schema({
         required: true,
         enum: ['Farmer', 'Supplier', 'Retailer']
     },
-    status: {type : String, enum:["In-Queue", "Processing", "Resolved"]}
+    status: {type : String, enum:["In-Queue", "Processing", "Resolved"]},
+    emp : {type: String},
 });
 
 module.exports = mongoose.model("Complaint", complaintSchema);

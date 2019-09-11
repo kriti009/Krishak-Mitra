@@ -125,7 +125,19 @@ app.put("/complaint",(req,res)=>{
         res.status(400).json({success: false, message: "Internal error, could not edit complaint"});
     })
 })
-
+app.put("/assign_emp", (req,res)=>{
+    var edited_complaint = {
+        emp : req.body.emp,
+    };
+    Complaint.findByIdAndUpdate(req.body._id, edited_complaint).then((com)=>{
+        if(com==null)
+            res.status(404).json({success: false, message: "No such complaint exists!"});
+        else
+            res.status(201).json({success: true, message: "Successfully Assigned executive to the Complaint"});
+    }).catch(()=>{
+        res.status(400).json({success: false, message: "Internal error, could not edit complaint"});
+    })
+})
 app.put('/adminLogin', (req, res) => {
     var username = req.body.username;
     var password  = req.body.password;

@@ -3,6 +3,8 @@ var Schema = mongoose.Schema;
 var advertisementSchema = new mongoose.Schema({
     category : {type: String, enum :["buy","sell"], required: true},
     item_name : {type: String, required : true},
+    description : {type :String},
+    image : {type :String},
     quantity : {type : Number},
     cost : {type : Number},
     poster : {
@@ -16,6 +18,6 @@ var advertisementSchema = new mongoose.Schema({
         enum: ['Farmer', 'Supplier', 'Retailer']
     },
     status: {type: String , enum: ["sold","not-sold"]}
-});
+},{timestamps :true});
 
 module.exports = mongoose.model("Advertisement", advertisementSchema);
