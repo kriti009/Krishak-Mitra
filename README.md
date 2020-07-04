@@ -6,7 +6,7 @@
 <h3>Instructions To Run</h3>
 <ol>
 <li>Clone the repo to your device
-<pre>git clone https://www.github.com/apollonian11/hackinfinity.git</pre>
+<pre>git clone https://github.com/kriti009/Krishak-Mitra.git</pre>
 </li>
 <li>Install developer dependencies
 <pre>npm install</pre>
